@@ -207,7 +207,7 @@ func (s *Server) handleConnect(ctx context.Context, request *http.Request, reade
 	if err := task.Run(ctx, closeWriter, responseDone); err != nil {
 		common.Interrupt(link.Reader)
 		common.Interrupt(link.Writer)
-		return newError("connection ends").Base(err)
+		return newError("connectdion ends").Base(err)
 	}
 
 	return nil
